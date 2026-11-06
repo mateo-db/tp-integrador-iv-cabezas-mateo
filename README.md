@@ -73,7 +73,7 @@ https://dev.to/walodja1987/understanding-typescript-execution-tools-a-deep-dive-
 
 - Un array con tipo se declara mediante `let` o `const`, el nombre de la variable junto a dos puntos y luego el nombre del tipo de dato junto a corchetes.
 
-## ¿Qué es un tipo unión?
+### ¿Qué es un tipo unión?
 
 - Los tipos unión representan un conjunto de distintos tipos que puede tomar un valor en particular. Lista alternativas de tipos con una barra vertical `|`. El valor en cuestión puede tomar solo un tipo de los listados. Ejemplo:
 
@@ -81,7 +81,13 @@ https://dev.to/walodja1987/understanding-typescript-execution-tools-a-deep-dive-
 
 - Con las variables de tipo unión se puede ir verificando mediante operadores como el `typeof` que posible valor tomará la variable, y de acuerdo a eso que acción tomar. A esto se le llama _narrowing_.
 
+### ¿Por qué se recomienda evitar _any_?
+
+- Se recomienda evitar el tipo `any` ya que es la parte más insegura del sistema de tipos en TypeScript. El tipo `any` indica un tipo que puede tomar cualquier valor y puede usarse en lugar de cualquier otro tipo. Al usar `any` se desactiva la verificación de tipos de TypeScript, lo que lo hace sumamente inseguro ya que el compilador acepta a ciegas cualquier valor que tome este tipo.
+
 https://coddy.tech/learn/javascript/introduction_to_typescript/typed_arrays
 https://coddy.tech/docs/es/typescript/basic-types
 https://www.codecademy.com/learn/learn-typescript/modules/learn-typescript-union-types/cheatsheet
 https://coddy.tech/docs/es/typescript/union-types
+https://coddy.tech/docs/es/typescript/any-vs-unknown
+https://typescript-eslint.io/blog/avoiding-anys/
