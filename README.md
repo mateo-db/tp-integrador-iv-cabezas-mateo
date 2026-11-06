@@ -1,6 +1,6 @@
-> ## Tema 1
+> ## Tema 1: ¿Qué es TypeScript?
 
-### ¿Qué es _TypeScript_?
+### ¿Qué es _TypeScript_ y quién lo desarrolla?
 
 - TypeScript es un lenguaje de programación que funciona como un _superset_ o superconjunto de JavaScript. Que sea un superconjunto de JS quiere decir que todo código válido escrito en JavaScript es también código TypeScript válido.
 - Lo desarrolla la compañía Microsoft desde 2012 como proyecto de código abierto.
@@ -31,7 +31,7 @@ https://ajluisarg.medium.com/javascript-se-compila-c%C3%B3mo-que-no-es-interpret
 https://www.coderhouse.com/ar/coderlibrary/que-es-typescript-y-por-que-es-clave-en-desarrollo-web-moderno
 https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/
 
-> ## Tema 2
+> ## Tema 2: Crear y ejecutar un proyecto
 
 ### ¿Como se instala TypeScript en un proyecto?
 
@@ -60,3 +60,28 @@ o bien,
 Fuentes: Material Unidad 4 "Introducción a TypeScript".
 https://coddy.tech/docs/es/typescript/install-typescript
 https://dev.to/walodja1987/understanding-typescript-execution-tools-a-deep-dive-14ca
+
+> ## Tema 3: Tipos básicos
+
+### ¿Qué son los tipos string, number y boolean?
+
+- Los tipos `string` son tipos de dato que representan texto. Se escriben entre comillas simples, dobles o backticks.
+- Los tipos `number` son tipos de dato que representan cúalquier número, entero o no. No existen los tipos `int` o `float`.
+- Los tipos `boolean` son tipos de dato que representan dos posibles valores: `true` o `false`.
+
+### ¿Cómo se declara un array con tipo?
+
+- Un array con tipo se declara mediante `let` o `const`, el nombre de la variable junto a dos puntos y luego el nombre del tipo de dato junto a corchetes.
+
+## ¿Qué es un tipo unión?
+
+- Los tipos unión representan un conjunto de distintos tipos que puede tomar un valor en particular. Lista alternativas de tipos con una barra vertical `|`. El valor en cuestión puede tomar solo un tipo de los listados. Ejemplo:
+
+`let typedAnswer: string | number; // union type // typedAnswer es una variable con un valor de tipo string O number`
+
+- Con las variables de tipo unión se puede ir verificando mediante operadores como el `typeof` que posible valor tomará la variable, y de acuerdo a eso que acción tomar. A esto se le llama _narrowing_.
+
+https://coddy.tech/learn/javascript/introduction_to_typescript/typed_arrays
+https://coddy.tech/docs/es/typescript/basic-types
+https://www.codecademy.com/learn/learn-typescript/modules/learn-typescript-union-types/cheatsheet
+https://coddy.tech/docs/es/typescript/union-types
