@@ -85,9 +85,37 @@ https://dev.to/walodja1987/understanding-typescript-execution-tools-a-deep-dive-
 
 - Se recomienda evitar el tipo `any` ya que es la parte más insegura del sistema de tipos en TypeScript. El tipo `any` indica un tipo que puede tomar cualquier valor y puede usarse en lugar de cualquier otro tipo. Al usar `any` se desactiva la verificación de tipos de TypeScript, lo que lo hace sumamente inseguro ya que el compilador acepta a ciegas cualquier valor que tome este tipo.
 
-https://coddy.tech/learn/javascript/introduction_to_typescript/typed_arrays
+Fuentes: https://coddy.tech/learn/javascript/introduction_to_typescript/typed_arrays
 https://coddy.tech/docs/es/typescript/basic-types
 https://www.codecademy.com/learn/learn-typescript/modules/learn-typescript-union-types/cheatsheet
 https://coddy.tech/docs/es/typescript/union-types
 https://coddy.tech/docs/es/typescript/any-vs-unknown
 https://typescript-eslint.io/blog/avoiding-anys/
+
+> ## Tema 4: Funciones
+
+### ¿Cómo se indican los tipos de los parámetros?
+
+- Los tipos de los parametros se indican escribiendo el nombre del parámetro junto a dos puntos seguido del tipo. Cualquier tipo sirve como tipo de parámetro. Ej:
+
+```
+function area(width: number, height: number) {
+  return width * height;
+}
+```
+
+### ¿Cómo se indica el tipo de retorno?
+
+- En las funciones, aparte del parámetro también se puede especificar el tipo del retorno. Se hace luego del paréntesis de cierre de los parámetros, dos puntos seguido del tipo que tendrá el retorno de la función. El tipo del retorno de una función, si no se especifica, suele ser inferido por TypeScript según lo que retorne la función.
+
+### ¿Qué es un parámetro opcional?
+
+- Los parámetros opcionales son aquellos que, a la hora de llamar a una función, no es necesario proporcionarles un valor. Para especificar si un parametro es opcional simplemente se le agrega un signo de interrogación (_?_) luego del nombre del parámetro.
+
+### ¿Qué es un parámetro por defecto?
+
+- Un parámetro por defecto es aquel que servirá como valor "default" de nuestra función. Es decir, si a la función cuando la invocamos no se le proporciona un valor al parámetro en cuestión, ese parámetro tomará el valor por defecto con el cual fue declarado en un principio.
+
+Fuentes: https://coddy.tech/docs/es/typescript/functions
+https://www.luisllamas.es/typescript-parametros-funciones/
+https://www.typescriptlang.org/docs/handbook/functions.html
