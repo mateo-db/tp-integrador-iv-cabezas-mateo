@@ -2,7 +2,7 @@
 
 ### ¿Qué es _TypeScript_ y quién lo desarrolla?
 
-- TypeScript es un lenguaje de programación que funciona como un _superset_ o superconjunto de JavaScript. Que sea un superconjunto de JS quiere decir que todo código válido escrito en JavaScript es también código TypeScript válido.
+- TypeScript es un lenguaje de programación que funciona como un _superset_ o superconjunto de JavaScript. Esto quiere decir que todo código válido escrito en JavaScript es también código TypeScript válido.
 - Lo desarrolla la compañía Microsoft desde 2012 como proyecto de código abierto.
 
 ### ¿Qué diferencias tiene con JavaScript?
@@ -10,7 +10,7 @@
 - La principal diferencia es su tipado estático frente el tipado dinámico de JavaScript.
   - El tipado estático significa que las variables se declaran con un tipo de dato, y los valores que se asignan a esas variables solo pueden ser del tipo correspondiente.
   - JavaScript, en cambio, es más flexible o permisivo con los tipos y conversiones implicitas.
-- Otra de las diferencias principales entre estas dos tecnologías es que TypeScript requiere un tiempo de compilación previo, donde se compila (o transpila) a JavaScript para su posterior ejecución. En contraste con esto, JavaScript es un lenguaje interpretado con compilación JIT (_Just-In-Time_). No necesita una compilación previa antes de ser leído y ejecutado por el entorno de desarrollo, en cambio TypeScript sí.
+- Otra de las diferencias principales entre estas dos tecnologías es que TypeScript requiere un tiempo de compilación previo, donde se compila (o transpila) a JavaScript para su posterior ejecución. En contraste con esto, JavaScript no necesita una compilación previa antes de ser leído y ejecutado por el entorno de desarrollo.
 
 ### ¿Qué ventajas ofrece?
 
@@ -128,7 +128,7 @@ https://www.typescriptlang.org/docs/handbook/functions.html
 
 ### ¿Qué es un _type_?
 
-- Los _type_ o _alias de tipo_ son una forma de dar nombre a cualquier tipo con la palabra clave `type`, ya sea formas de objeto, funciones, uniones, etc. Como vemos `type` es una forma de "describir" tal como las interfaces, la diferencia radica en qué puede hacer uno qué el otro no. `Type` puede nombrar cosas que una `interface` no puede (`unions` por ejemplo).
+- _Type_ es una forma de definir cualquier tipo con la palabra clave `type`, ya sea formas de objeto, funciones, uniones, etc. Como vemos `type` es una forma de "describir" tal como las interfaces, la diferencia radica en qué puede hacer uno qué el otro no. `Type` puede definir cosas que una `interface` no puede (`unions` por ejemplo).
 
 ### ¿Como se declara una propiedad opcional?
 
@@ -154,7 +154,7 @@ https://www.luisllamas.es/interfaces-en-typescript/
 
 ### ¿Qué es un _enum_?
 
-- Un `enum` en TypeScript es un conjunto de valores constantes bajo un mismo nombre. Para definir un enum, se utiliza la palabra clave `enum` seguida del nombre del enum y un bloque de llaves que contiene los valores del enum. Los enums son una de las pocas características de TypeScript que no son solo tipos: un enum se convierte en un _objeto real_ de JavaScript cuando se compila el código.
+- Un `enum` en TypeScript es un conjunto de valores constantes y nombradas bajo un mismo nombre. Para definir un enum, se utiliza la palabra clave `enum` seguida del nombre del enum y un bloque de llaves que contiene los valores del enum. Los enums son una de las pocas características de TypeScript que no son solo tipos: un enum se convierte en un _objeto real_ de JavaScript cuando se compila el código.
 
 ### ¿Qué es un tipo literal?
 
