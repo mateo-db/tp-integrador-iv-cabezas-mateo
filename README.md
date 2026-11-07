@@ -122,11 +122,11 @@ https://www.typescriptlang.org/docs/handbook/functions.html
 
 > ## Tema 5: Interfaces y type
 
-### ¿Qué es una interfaz y para qué sirve?
+### ¿Qué es una _interfaz_ y para qué sirve?
 
 - Una `interface` es una herramienta fundamental en la programación orientada a objetos que sirve para definir la estructura y comportamiento de un objeto. Es como programar una "plantilla" o plano que servirá para construir otras cosas.
 
-### ¿Qué es un type?
+### ¿Qué es un _type_?
 
 - Los _type_ o _alias de tipo_ son una forma de dar nombre a cualquier tipo con la palabra clave `type`, ya sea formas de objeto, funciones, uniones, etc. Como vemos `type` es una forma de "describir" tal como las interfaces, la diferencia radica en qué puede hacer uno qué el otro no. `Type` puede nombrar cosas que una `interface` no puede (`unions` por ejemplo).
 
@@ -149,3 +149,42 @@ https://coddy.tech/docs/es/typescript/interface-vs-type
 https://medium.com/@jesusmurfontanals/typescript-para-que-sirven-los-types-y-interfaces-y-en-que-se-diferencian-bee0af17fffa
 https://code.mu/es/javascript/typescript/book/prime/structures/optional-properties/#
 https://www.luisllamas.es/interfaces-en-typescript/
+
+> ## Tema 6: Enums y tipos literales
+
+### ¿Qué es un _enum_?
+
+- Un `enum` en TypeScript es un conjunto de valores constantes bajo un mismo nombre. Para definir un enum, se utiliza la palabra clave `enum` seguida del nombre del enum y un bloque de llaves que contiene los valores del enum. Los enums son una de las pocas características de TypeScript que no son solo tipos: un enum se convierte en un _objeto real_ de JavaScript cuando se compila el código.
+
+### ¿Qué es un tipo literal?
+
+- Un tipo literal es un tipo que admite solo valores que se le asignó al momento de ser declarado y nada más. El motivo principal de esto es limitar los posibles valores que pueda tomar una variable, asegurando mayor control y seguridad sobre esta última.
+- Dependiendo el tipo (tipo literal de cadena, númerico, etc) puede admitir 1 o más variables, pero solo esos. Asignarle un valor diferente de los que se le asignó en un principio provocará un error. Ejemplo:
+
+```
+type UnoADiez = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+
+let numero: UnoADiez;
+
+numero = 1;  // Correcto
+numero = 5;  // Correcto
+// numero = 11; // Error: El tipo '11' no se puede asignar al tipo 'UnoADiez'.
+```
+
+### ¿En qué se parecen y en qué se diferencian?
+
+- Son similares en el sentido de que ambos tanto el enum como los literals son formas de restringir los posibles valores aceptables para una variable. Ahora, tienen varias diferencias:
+  - Un `enum` le da **nombre** al conjunto de valores aceptados, y es reutilizable ya que al transpilar el código a JavaScript persiste como un objeto real.
+  - Un `type literal` permite _definir un tipo_ para el conjunto de valores aceptados en una variable, pero eso solo le servirá al desarrollador en momento de producción, ya que el tipo literal creado y los valores aceptables que define desaparecen sin producir código al momento de compilación.
+
+### ¿En qué situaciones puedo usar cada uno?
+
+- Enums: cuando se necesita hacer un listado restringido a opciones fijas, claras y nombradas como roles, estados, etc. Herramienta muy útil en la construcción de proyectos medianos a grandes como blogs o APIs.
+
+- Literals: debido a que tienen costo cero (no compilan a código) y son rápidos de usar, se suelen usar para indicar _pocos_ valores fijos para una variable. Se puede usar cuando se necesita una alternátiva rápida y barata a los enums.
+
+Fuentes: https://www.youtube.com/watch?v=SOUYThoIzqc
+https://coddy.tech/docs/typescript/literal-types
+https://coddy.tech/docs/es/typescript/enums
+https://www.luisllamas.es/typescript-literales/
+https://dev.to/dchowitz/typescript-enums-vs-string-unions-whats-the-deal-53om
