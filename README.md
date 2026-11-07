@@ -110,7 +110,7 @@ function area(width: number, height: number) {
 
 ### ¿Qué es un parámetro opcional?
 
-- Los parámetros opcionales son aquellos que, a la hora de llamar a una función, no es necesario proporcionarles un valor. Para especificar si un parametro es opcional simplemente se le agrega un signo de interrogación (_?_) luego del nombre del parámetro.
+- Los parámetros opcionales son aquellos que, a la hora de llamar a una función, no es necesario proporcionarles un valor. Para especificar si un parametro es opcional simplemente se le agrega un signo de interrogación (**?**) luego del nombre del parámetro.
 
 ### ¿Qué es un parámetro por defecto?
 
@@ -119,3 +119,33 @@ function area(width: number, height: number) {
 Fuentes: https://coddy.tech/docs/es/typescript/functions
 https://www.luisllamas.es/typescript-parametros-funciones/
 https://www.typescriptlang.org/docs/handbook/functions.html
+
+> ## Tema 5: Interfaces y type
+
+### ¿Qué es una interfaz y para qué sirve?
+
+- Una `interface` es una herramienta fundamental en la programación orientada a objetos que sirve para definir la estructura y comportamiento de un objeto. Es como programar una "plantilla" o plano que servirá para construir otras cosas.
+
+### ¿Qué es un type?
+
+- Los _type_ o _alias de tipo_ son una forma de dar nombre a cualquier tipo con la palabra clave `type`, ya sea formas de objeto, funciones, uniones, etc. Como vemos `type` es una forma de "describir" tal como las interfaces, la diferencia radica en qué puede hacer uno qué el otro no. `Type` puede nombrar cosas que una `interface` no puede (`unions` por ejemplo).
+
+### ¿Como se declara una propiedad opcional?
+
+- Una propiedad opcional se declara agregando un signo de interrogación (**?**) luego del nombre de la propiedad, antes de los dos puntos.
+
+### ¿Cuando conviene usar cada uno?
+
+- Depende de lo que se necesite hacer:
+  - Para formas de objeto: conviene usar `interface`. Esto permite la fusión de declaraciones (lo que amplía los tipos), también hay una mejor descripción de los errores en composiciones grandes al usar `extends`.
+  - Para todo lo que no sea una única forma de objeto, es recomendado usar un alias de tipo (`type`). Ejemplo:
+  ```
+  type ID = string | number; //union de primitivas
+  ```
+  Tanto este ejemplo de arriba como muchos otros (tuplas, tipos de función, tipos literales) no se pueden realizar usando `interface`.
+
+Fuentes: https://coddy.tech/docs/es/typescript/type-aliases
+https://coddy.tech/docs/es/typescript/interface-vs-type
+https://medium.com/@jesusmurfontanals/typescript-para-que-sirven-los-types-y-interfaces-y-en-que-se-diferencian-bee0af17fffa
+https://code.mu/es/javascript/typescript/book/prime/structures/optional-properties/#
+https://www.luisllamas.es/interfaces-en-typescript/
